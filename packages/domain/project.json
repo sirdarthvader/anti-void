@@ -1,0 +1,5 @@
+{
+  "name": "domain",
+  "projectType": "library",
+  "sourceRoot": "packages/domain/src"
+}

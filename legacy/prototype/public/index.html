@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="A quiet place to catch a thought before it disappears.">
+  <title>Anti-Void — catch the thought</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="wordmark" href="/" aria-label="Anti-Void home"><span class="mark" aria-hidden="true">a</span><span>anti-void</span></a>
+  <span class="local-note"><span class="status-dot"></span> saved on this Mac</span>
+    </header>
+
+    <section class="capture" aria-labelledby="page-title">
+      <div class="eyebrow"><span>YOUR MIND, UNINTERRUPTED</span><span class="eyebrow-line"></span></div>
+      <h1 id="page-title">Catch the thought.<br><em>Leave the sorting for later.</em></h1>
+      <p class="intro">A place to put it down before it disappears. No title, no category, no need to make it make sense.</p>
+
+      <div class="recorder-wrap">
+        <button id="record-button" class="record-button" type="button" aria-pressed="false">
+          <span class="record-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="12" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3m-4 0h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <span class="record-label" id="record-label">Tap to speak</span>
+        </button>
+      </div>
+      <div class="record-state" id="record-state" aria-live="polite"><span class="state-dot"></span><span id="state-text">Nothing is saved here until you stop.</span></div>
+      <div class="live-caption" id="live-caption" aria-live="polite" hidden></div>
+
+      <details class="text-fallback">
+        <summary>Rather type this one?</summary>
+        <div class="text-entry">
+          <textarea id="thought-input" rows="3" placeholder="It can be messy. Just get it out." aria-label="Write a thought"></textarea>
+          <button id="save-text" class="save-button" type="button">Save thought <span aria-hidden="true">↗</span></button>
+        </div>
+      </details>
+      <p class="browser-note" id="browser-note">Your transcript is saved on this Mac. Voice recognition is provided by your browser and may process audio online; Anti-Void doesn’t keep the audio.</p>
+    </section>
+
+    <section class="inbox" aria-labelledby="inbox-heading">
+      <div class="inbox-heading">
+        <div><div class="eyebrow small"><span>THE INBOX</span></div><h2 id="inbox-heading">Thoughts you caught <span id="thought-count">0</span></h2></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a thought" aria-label="Find a thought"></label>
+      </div>
+      <div id="thought-list" class="thought-list" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state"><span class="empty-star" aria-hidden="true">✳</span><p>It’s quiet in here.<br>When a thought shows up, catch it above.</p></div>
+    </section>
+    <footer><span>One thought at a time is enough.</span><span>Saved locally on this Mac</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

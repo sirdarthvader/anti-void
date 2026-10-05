@@ -1,0 +1,27 @@
+{
+  "name": "anti-void",
+  "private": true,
+  "version": "0.2.0",
+  "packageManager": "pnpm@10.2.1",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "nx"
+    ]
+  },
+  "scripts": {
+    "dev": "nx run-many -t dev --projects=web,api --parallel",
+    "build": "nx run-many -t build",
+    "typecheck": "nx run-many -t typecheck",
+    "graph": "nx graph",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "nx": "^23.2.1"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "contracts",
+  "projectType": "library",
+  "sourceRoot": "packages/contracts/src"
+}

@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.nx
+data/*.db
+data/*.db-*
+data/media/
+.env
+.env.*
+!.env.example
